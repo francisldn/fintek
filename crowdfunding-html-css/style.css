@@ -12,3 +12,188 @@
 	"Why give 50" link: #25A5D8
 */
 
+:root {
+	--main-text-color: #838383;
+	--bg-speech-bubble: #424242;
+	--border-color: #DCDCDC;
+	--bg-progress-bar-orange: #F15E33;
+	--bg-progress-bar-grey:  #FAFAFA;
+	--bg-btn-btm: #FAFAFA;
+	--bg-btn-green: #00BE1C;
+	--border-btn-green:#01B21A;
+	--btm-text:#25A5D8;
+	--text-lg: 1.25rem;
+	--text-md: 1.125rem;
+	--text-sm: 0.875rem;
+}
+
+
+body {
+	font-family: 'Roboto';
+	display:flex;
+	justify-content: center;
+	padding-top:18rem;
+	padding-left:0;
+	padding-right:0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 23.5rem;
+}
+
+.title-container {
+	display:flex;
+	flex-direction:column;
+	height: 5rem;
+	justify-content: center;
+	border-radius: 4px;
+	overflow:hidden;
+}	
+
+.title-text {
+	font-size: var(--text-lg);
+	font-weight: 400;
+	padding:0;
+}
+
+.title {
+	background-color: var(--bg-speech-bubble);
+	color: white;
+	text-align: center;
+	height: 100%;
+	padding-top: 2%;
+	border-radius: 4px;
+}
+
+.arrow-down {
+	align-self:flex-end;
+	margin-right: 35px;
+	width: 0; 
+	height: 0; 
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 10px solid rgb(0,0,0,0.8);
+}
+
+.inner-container {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #DCDCDC;
+	width: 100%;
+	margin-top: 0.625rem;
+	
+}
+.progress-bar {
+	display:flex;
+	border-bottom: 1px solid #DCDCDC;
+}
+
+.progress-bar-orange {
+	height: 1rem;
+	width: 75%;
+	background-color: #F15E33;
+}
+
+.progress-bar-lightgrey {
+	width: 25%;
+	background-color: #dcdcdc;
+}
+
+.content {
+	display:flex;
+	flex-direction: column;
+	margin-left: 1.5rem;
+}
+
+.first-line {
+	font-size: var(--text-lg);
+	padding-top: 10px;
+}
+
+.first-line-em {
+	font-weight: 500;
+	color: #f15e33
+}
+
+.first-line-rest {
+	color: var(--main-text-color);
+	font-weight: 300;
+}
+
+.second-line {
+	font-size: var(--text-lg);
+	color: var(--main-text-color);
+	font-weight:300;
+	line-height:1.8rem;
+	margin-top: 0.2rem;
+	margin-bottom: 1.2rem;
+}
+
+.content-btm {
+	display: flex;
+	flex-direction: column;
+	margin-left: 7%;
+	margin-right: 8%;
+}
+
+.form-container {
+	display:flex;
+	gap: 1rem;
+	margin-left: 0;
+	height: 3.5rem;
+	width: 100%;
+	margin-top: 0.4rem;
+	padding: 0;
+}
+
+.input-form {
+	font-size: var(--text-lg);
+	border: 1px solid var(--border-color);
+	width: 80%;
+	padding-left: 10px;
+	font-weight: 600;
+	border-radius: 4px;
+	margin:0;
+}
+
+.btm-text {
+	color: var(--btm-text);
+	font-size: var(--text-md);
+	font-style: italic;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.input-btn {
+	background-color: var(--bg-btn-green);
+	border: 1px solid var(--border-btn-green);
+	color: white;
+	width: 90%;
+	font-size: var(--text-lg);
+	border-radius: 4px;
+}
+
+.bottom-btn-container {
+	display: flex;
+	gap: 1.5rem;
+	justify-content: center;
+	padding-top: 1.3rem;
+	width: 100%;
+}
+
+.btm-btn {
+	height: 2.8rem;
+	border: 1px solid var(--border-color);
+	background-color: var(--bg-btn-btm);
+	width: 100%;
+	font-size:var(--text-md);
+	font-weight: 500;
+	color: var(--main-text-color);
+	border-radius: 4px;
+}

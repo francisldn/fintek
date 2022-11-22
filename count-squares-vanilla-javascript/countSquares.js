@@ -19,8 +19,56 @@
  * @param b The other end of the range
  * @returns The number of perfect squares between a and b (inclusive).
  */
+
+// function to check if a number is a perfect square
+function isSquare(a) {
+    return Number.isInteger(Math.sqrt(a))
+}
+
 function countSquares(a, b) {
-    return -1; // Replace this with your implementation
+    let max = Math.max(a,b)
+    let min = Math.min(a,b)
+    
+    //scenario 1: both a<0 and b <0: no perfect square
+    if(max < 0) {
+        return 0
+    }
+    /* otherwise, we have 2 scenarios
+    1. both a and b are positive (>=0)
+    2. one of a or b is negative
+    take square root of the max number and round up
+    */
+    let sqrtMax = Math.floor(Math.sqrt(max))
+
+    // scenario 2: both positives (incl zero)
+    if(a>=0 && b>=0) {
+        // if a === b, covering cases where a or b is and isn't a perfect square
+        if(a === b) {
+            // if a or b is a perfect square: 1 perfect square
+            if(isSquare(a)) {
+                return 1
+            } else {
+                // if a or b is not a perfect square: no perfect square
+                return 0
+            }
+        }
+        // if a !== b, 
+        // if (sqrtMax < min) 
+        if(sqrtMax < min) {
+            return 0
+        } else {
+            // if (sqrtMax > min) 
+            // add 1 to include min value
+            return sqrtMax - min + 1
+        }
+    }
+
+    // Scenario 3: one of a or b is negative, that means min will be negative, disregard the min value
+    if((a>=0 && b<0) || (a<0 && b>=0)) {
+        // add 1 to include zero 
+        return sqrtMax + 1
+    }
+
 }
 
 /**
